@@ -12,10 +12,8 @@ import java.util.*
 
 
 class SpinnerAdapter(context: Context, list: Array<String>) : BaseAdapter() {
-
     private val layoutInflater: LayoutInflater = LayoutInflater.from(context)
     private val mList = list
-    private val mContext = context
 
 
 
@@ -32,7 +30,7 @@ class SpinnerAdapter(context: Context, list: Array<String>) : BaseAdapter() {
 
             //데이터세팅
             val text = mList[position]
-            (convertView.findViewById(R.id.spinnerText) as TextView).text = text
+            (convertView.findViewById(R.id.spinnerText_normal) as TextView).text = text
 
         }
         return view
@@ -46,7 +44,7 @@ class SpinnerAdapter(context: Context, list: Array<String>) : BaseAdapter() {
 
             //데이터세팅
             val text = mList[position]
-            (convertView.findViewById(R.id.spinnerText) as TextView).text = text
+            (convertView.findViewById(R.id.spinnerText_dropdown) as TextView).text = text
 
         }
         return view

@@ -12,7 +12,7 @@
         android:layout_height="24dp" />
 
     <TextView
-        android:id="@+id/spinnerText"
+        android:id="@+id/spinnerText_dropdown"
         android:textSize="15sp"
         android:textColor="#000"
         android:alpha="0.87"
