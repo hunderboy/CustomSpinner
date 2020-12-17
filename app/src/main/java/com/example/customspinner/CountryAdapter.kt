@@ -1,7 +1,6 @@
 package com.example.customspinner
 
 import android.content.Context
-import android.util.Log
 import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
@@ -31,39 +30,30 @@ class CountryAdapter(context: Context) : ArrayAdapter<OperatedCountry>(context, 
             view = layoutInflater.inflate(R.layout.item_country, parent, false)
         } else {
             view = convertView
-
-            Log.e("들어옴","")
-            getItem(position).let { country ->
-                if (country != null) {
-                    setItemForCountry(view, country)
-                }
-            }
         }
-//        getItem(position).let { country ->
-//            if (country != null) {
-//                setItemForCountry(view, country)
-//            }
-//        }
+        getItem(position)?.let { country ->
+            setItemForCountry(view, country)
+        }
         return view
     }
 
-//    override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup): View {
-//        val view: View
-//        if (position == 0) {
-//            view = layoutInflater.inflate(R.layout.header_country, parent, false)
-//            view.setOnClickListener {
-//                val root = parent.rootView
-//                root.dispatchKeyEvent(KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_BACK))
-//                root.dispatchKeyEvent(KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_BACK))
-//            }
-//        } else {
-//            view = layoutInflater.inflate(R.layout.layout_country_dropdown, parent, false)
-//            getItem(position)?.let { country ->
-//                setItemForCountry(view, country)
-//            }
-//        }
-//        return view
-//    }
+    override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup): View {
+        val view: View
+        if (position == 0) {
+            view = layoutInflater.inflate(R.layout.header_country, parent, false)
+            view.setOnClickListener {
+                val root = parent.rootView
+                root.dispatchKeyEvent(KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_BACK))
+                root.dispatchKeyEvent(KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_BACK))
+            }
+        } else {
+            view = layoutInflater.inflate(R.layout.layout_country_dropdown, parent, false)
+            getItem(position)?.let { country ->
+                setItemForCountry(view, country)
+            }
+        }
+        return view
+    }
 
 
     private fun setItemForCountry(view: View, country: OperatedCountry) {
