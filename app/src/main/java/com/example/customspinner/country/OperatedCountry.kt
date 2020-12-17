@@ -1,4 +1,6 @@
-package com.example.customspinner
+package com.example.customspinner.country
+
+import com.example.customspinner.R
 
 enum class OperatedCountry(val countryCode: String, val icon: Int) {
     UNITED_KINGDOM("UK", R.drawable.uk),

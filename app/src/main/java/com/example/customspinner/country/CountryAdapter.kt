@@ -1,4 +1,4 @@
-package com.example.customspinner
+package com.example.customspinner.country
 
 import android.content.Context
 import android.view.KeyEvent
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.customspinner.R
 import java.util.*
 
 class CountryAdapter(context: Context) : ArrayAdapter<OperatedCountry>(context, 0, OperatedCountry.values()){
@@ -60,6 +61,8 @@ class CountryAdapter(context: Context) : ArrayAdapter<OperatedCountry>(context, 
         val tvCountry = view.findViewById<TextView>(R.id.tvCountry)
         val ivCountry = view.findViewById<ImageView>(R.id.ivCountry)
         val countryName = Locale("", country.countryCode).displayCountry
+//        Log.e("countryName", " = $countryName")
+
         tvCountry.text = countryName
         ivCountry.setBackgroundResource(country.icon)
     }

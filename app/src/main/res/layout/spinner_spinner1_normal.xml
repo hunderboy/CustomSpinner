@@ -5,12 +5,12 @@
     android:paddingRight="13dp"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="30dp">
 
     <ImageView
         android:src="@drawable/company_logo_mint"
-        android:layout_width="24dp"
-        android:layout_height="24dp" />
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
 
     <TextView
         android:id="@+id/spinnerText_normal"

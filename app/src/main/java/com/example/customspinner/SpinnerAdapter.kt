@@ -18,9 +18,12 @@ class SpinnerAdapter(context: Context, list: Array<String>) : BaseAdapter() {
 
 
     override fun getItem(position: Int) = mList[position]
-    override fun getCount() = mList.size
     override fun getItemId(position: Int) = position.toLong()
     override fun isEnabled(position: Int) = position != 0
+
+
+
+    override fun getCount() = mList.size
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val view: View
         if (convertView == null) {
@@ -35,20 +38,21 @@ class SpinnerAdapter(context: Context, list: Array<String>) : BaseAdapter() {
         }
         return view
     }
-    override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup): View {
-        val view: View
-        if (convertView == null) {
-            view = layoutInflater.inflate(R.layout.spinner_spinner1_dropdown, parent, false)
-        } else {
-            view = convertView
 
-            //데이터세팅
-            val text = mList[position]
-            (convertView.findViewById(R.id.spinnerText_dropdown) as TextView).text = text
-
-        }
-        return view
-    }
+//    override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup): View {
+//        val view: View
+//        if (convertView == null) {
+//            view = layoutInflater.inflate(R.layout.spinner_spinner1_dropdown, parent, false)
+//        } else {
+//            view = convertView
+//
+//            //데이터세팅
+//            val text = mList[position]
+//            (convertView.findViewById(R.id.spinnerText_dropdown) as TextView).text = text
+//
+//        }
+//        return view
+//    }
 
 
 }
