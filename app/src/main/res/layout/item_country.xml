@@ -30,7 +30,7 @@
         android:layout_centerVertical="true"
         android:textColor="@color/BlackTextColor"
         android:textSize="18sp"
-        tools:text="United Kingdom"/>
+        tools:text="Choose Item"/>
 
     <ImageView
         android:layout_width="40dp"

@@ -11,7 +11,7 @@ import android.widget.TextView
 import java.util.*
 
 
-class SpinnerAdapter(context: Context, list: Array<String>) : BaseAdapter() {
+class DefaultSpinnerAdapter(context: Context, list: Array<String>) : BaseAdapter() {
     private val layoutInflater: LayoutInflater = LayoutInflater.from(context)
     private val mList = list
 

@@ -10,10 +10,10 @@ import android.widget.ArrayAdapter
 import android.widget.TextView
 import com.example.customspinner.country.CustomSpinnerActivity
 import com.example.customspinner.databinding.ActivityMainBinding
+import com.example.customspinner.service.ServiceActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-
     private val items = arrayOf("데이터0","아이템1","데이터2","아이템3","화이팅4")
 
 
@@ -30,8 +30,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, CustomSpinnerActivity::class.java)
             startActivity(intent)
         }
+        binding.button2.setOnClickListener {
+            val intent = Intent(this, ServiceActivity::class.java)
+            startActivity(intent)
+        }
         // 스피너 설정 부분
-        val myAdapter = SpinnerAdapter(this, items)
+        val myAdapter = DefaultSpinnerAdapter(this, items)
         binding.spinner.adapter = myAdapter
 
 

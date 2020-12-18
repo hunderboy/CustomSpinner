@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SpinnerTextstyle">
+        <item name="android:textSize">
+            25sp
+        </item>
+        <item name="android:letterSpacing">
+            -0.01
+        </item>
+        <item name="android:textColor">
+            #323232
+        </item>
+        <item name="android:textStyle">
+            bold
+        </item>
+    </style>
+
+
+
+</resources>
