@@ -22,6 +22,11 @@ class ServiceActivity : AppCompatActivity() {
             "골절", "기타"
     )
 
+    private val weekItems = arrayListOf("0회", "1회", "2회", "3회", "4회", "5회", "6회", "7회")
+    private val dayItems = arrayListOf("30분", "1시간", "2시간", "3시간", "4시간", "4시간 이상")
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityServiceBinding.inflate(layoutInflater)
@@ -30,7 +35,15 @@ class ServiceActivity : AppCompatActivity() {
 
         // 버튼 클릭
         binding.buttonData.setOnClickListener {
-            val selectedData = binding.spinnerService2.selectedItem.toString()
+            // 무릎통증
+//            val selectedData = binding.spinnerService2.selectedItem.toString()
+//            Toast.makeText(this, "선택된 DATA = $selectedData", Toast.LENGTH_SHORT).show()
+
+//            // 주
+//            val selectedData = binding.spinnerServiceWeek.selectedItem.toString()
+//            Toast.makeText(this, "선택된 DATA = $selectedData", Toast.LENGTH_SHORT).show()
+            // 하루
+            val selectedData = binding.spinnerServiceDay.selectedItem.toString()
             Toast.makeText(this, "선택된 DATA = $selectedData", Toast.LENGTH_SHORT).show()
         }
 
@@ -38,9 +51,20 @@ class ServiceActivity : AppCompatActivity() {
         // 스피너 설정 부분
         val myAdapter = ServiceCustomSpinnerAdapter(this, items)
         binding.spinnerService.adapter = myAdapter
-        // layout xml 설정한 스피너
+
+        // 무릎통증 스피너 설정 부분
         val myAdapter2 = ServiceLayoutAdapter(this, surveyItems)
         binding.spinnerService2.adapter = myAdapter2
+
+        // 주 스피너
+        val weekAdapter = WeekSpinnerAdapter(this, weekItems)
+        binding.spinnerServiceWeek.adapter = weekAdapter
+
+        // 하루 스피너
+        val dayAdapter = DaySpinnerAdapter(this, dayItems)
+        binding.spinnerServiceDay.adapter = dayAdapter
+
+
 
 //        try {
 //            val popup: Field = Spinner::class.java.getDeclaredField("mPopup")

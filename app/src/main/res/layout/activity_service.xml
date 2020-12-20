@@ -80,4 +80,25 @@
         app:layout_constraintTop_toBottomOf="@+id/button_data" />
 
 
+
+    <Spinner
+        android:id="@+id/spinner_service_day"
+        android:layout_width="fill_parent"
+        android:layout_height="84dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+
+        android:elevation="10dp"
+        android:translationZ="10dp"
+        android:background="@drawable/radius_white_button"
+        android:popupBackground="@drawable/radius_white_button"
+        android:spinnerMode="dropdown"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_service_week" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

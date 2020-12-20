@@ -2,20 +2,20 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="84dp">
 
 
-
+<!--   해당  item 뷰에 id를 가지는 TextView 가 1개만 존재해야 함. 그래야 선택된 데이터를 인식가능함. -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
+        android:layout_marginStart="45dp"
 
         android:textColor="@color/BlackTextColor"
         android:textAppearance="@style/SpinnerTextstyle"
-        android:text="주"
+        android:text="하루"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,12 +23,12 @@
 
 
     <TextView
-        android:id="@+id/week_textview"
+        android:id="@+id/day_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
 
-        android:text="0회"
+        android:text="30분"
         android:textAppearance="@style/SpinnerTextstyle"
         android:textColor="@color/BlackTextColor"
 
@@ -48,8 +48,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
