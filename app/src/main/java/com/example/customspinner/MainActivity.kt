@@ -34,15 +34,15 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ServiceActivity::class.java)
             startActivity(intent)
         }
+        binding.button3.setOnClickListener {
+            val intent = Intent(this, SelectCountryActivity::class.java)
+            startActivity(intent)
+        }
+
+
         // 스피너 설정 부분
         val myAdapter = DefaultSpinnerAdapter(this, items)
         binding.spinner.adapter = myAdapter
-
-
-
-
-
-
 
 
 
