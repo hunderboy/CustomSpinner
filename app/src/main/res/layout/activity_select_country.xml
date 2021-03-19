@@ -6,4 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".SelectCountryActivity">
 
+
+
+    <Spinner
+        android:id="@+id/sCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+
+        android:background="@drawable/blue_outline"
+        android:popupBackground="@drawable/blue_outline_white_background"
+        android:spinnerMode="dropdown"
+        tools:listitem="@layout/item_country"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+<!--    <Spinner-->
+<!--        android:id="@+id/spinner"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+
+<!--        android:layout_marginStart="50dp"-->
+<!--        android:layout_marginTop="144dp"-->
+<!--        android:layout_marginEnd="50dp"-->
+
+<!--        android:background="@drawable/blue_outline"-->
+<!--        android:popupBackground="@drawable/blue_outline_white_background"-->
+
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

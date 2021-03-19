@@ -10,4 +10,8 @@
 
     <color name="BlackTextColor">#3c3c3c</color>
 
+<!-- SelectCountryActivity   -->
+    <color name="blue_outline_Color">#3232FF</color>
+
+
 </resources>

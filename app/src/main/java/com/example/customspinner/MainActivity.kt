@@ -27,8 +27,8 @@ class MainActivity : AppCompatActivity() {
 
         // 버튼 설정 부분
         binding.button1.setOnClickListener {
-            val intent = Intent(this, CustomSpinnerActivity::class.java)
-            startActivity(intent)
+//            val intent = Intent(this, CustomSpinnerActivity::class.java)
+//            startActivity(intent)
         }
         binding.button2.setOnClickListener {
             val intent = Intent(this, ServiceActivity::class.java)

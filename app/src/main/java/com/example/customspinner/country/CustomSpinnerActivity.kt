@@ -27,8 +27,8 @@ class CustomSpinnerActivity : AppCompatActivity() {
 
 
         // 스피너 설정부분
-        val countrySpinnerAdapter = CountryAdapter(this)
-        binding.sCountry.adapter = countrySpinnerAdapter
+//        val countrySpinnerAdapter = CountryAdapter(this)
+//        binding.sCountry.adapter = countrySpinnerAdapter
 
 
 
