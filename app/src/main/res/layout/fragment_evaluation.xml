@@ -8,94 +8,86 @@
     tools:context=".fragment.PainKillerFragment">
 
 
-    <ImageButton
-        android:id="@+id/imageButton_previous"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/radius_white_button"
-
-        android:scaleType="fitCenter"
-        android:src="@drawable/back_arrow"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/question_pain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/Question_about_pain_killer"
+        android:layout_marginTop="30dp"
+        android:text="@string/Question_exercise_evaluation"
         android:gravity="center"
         android:textAppearance="@style/Qusetion_pain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/question_pain_killer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/pain_explaination"
-        android:textAppearance="@style/expalin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/question_pain" />
-
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/button_submit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/question_pain_killer"
-        app:layout_constraintVertical_bias="0.4">
+        app:layout_constraintTop_toBottomOf="@+id/question_pain">
 
         <ImageButton
-            android:id="@+id/imageButton_Yes"
+            android:id="@+id/imageButton_hard"
             android:layout_width="78dp"
             android:layout_height="78dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:background="@drawable/radius_white_button"
+            android:elevation="5dp"
             android:padding="10dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/grey_circle"
-            android:elevation="5dp" />
+            android:src="@drawable/hard" />
 
         <ImageButton
-            android:id="@+id/imageButton_No"
+            android:id="@+id/imageButton_soso"
             android:layout_width="78dp"
             android:layout_height="78dp"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:layout_marginEnd="5dp"
             android:background="@drawable/radius_white_button"
+            android:elevation="5dp"
             android:padding="10dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/grey_circle"
-            android:elevation="5dp" />
+            android:src="@drawable/soso" />
+
+
+        <ImageButton
+            android:id="@+id/imageButton_Easy"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/radius_white_button"
+            android:elevation="5dp"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/easy" />
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button_submit"
+
+    <TextView
+        android:id="@+id/question_pain_killer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="제출하기"
-        android:backgroundTint="@color/colorIndigo"
+        android:text="@string/evaluation_explaination"
+
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="10dp"
+
+        android:textAppearance="@style/explaination"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

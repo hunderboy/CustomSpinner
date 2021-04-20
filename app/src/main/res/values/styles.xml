@@ -33,5 +33,13 @@
             #969696
         </item>
     </style>
+    <style name="explaination">
+        <item name="android:textSize">
+            11sp
+        </item>
+        <item name="android:textColor">
+            #CC000000
+        </item>
+    </style>
 
 </resources>

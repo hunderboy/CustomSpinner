@@ -9,6 +9,10 @@ import com.example.customspinner.fragment.CustomDialogFragment
 class CustomDialogActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCustomDialogBinding
 
+
+    // 슬라이드 이동을 위해 전역변수로 설정
+    val dialogFragmentExample = CustomDialogFragment()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCustomDialogBinding.inflate(layoutInflater)
@@ -18,7 +22,6 @@ class CustomDialogActivity : AppCompatActivity() {
         binding.buttonDialog.setOnClickListener {
 //            CustomDialog(context = this).myDig()
 
-            val dialogFragmentExample = CustomDialogFragment()
             dialogFragmentExample.show(supportFragmentManager, null)
 
 

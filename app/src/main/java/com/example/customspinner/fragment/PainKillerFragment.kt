@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import com.example.customspinner.CustomDialogActivity
 import com.example.customspinner.R
 import com.example.customspinner.databinding.FragmentPainBinding
 import com.example.customspinner.databinding.FragmentPainKillerBinding
@@ -23,9 +25,21 @@ class PainKillerFragment : Fragment() {
         val view = binding.root
 
         // 페이지 이동
-        binding.buttonPrevious.setOnClickListener(){
-            CustomDialogFragment().slidePreviousPage()
+        binding.imageButtonPrevious.setOnClickListener(){
+            (activity as CustomDialogActivity).dialogFragmentExample.slidePreviousPage()
         }
+
+        binding.imageButtonYes.setOnClickListener(){
+            Toast.makeText(context, "Yes", Toast.LENGTH_SHORT).show()
+        }
+        binding.imageButtonNo.setOnClickListener(){
+            Toast.makeText(context, "No", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.buttonSubmit.setOnClickListener(){
+            (activity as CustomDialogActivity).dialogFragmentExample.slideNextPage()
+        }
+
 
         return view
     }

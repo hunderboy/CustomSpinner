@@ -7,11 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.customspinner.CustomDialogActivity
 import com.example.customspinner.R
+import com.example.customspinner.databinding.FragmentEvaluationBinding
 import com.example.customspinner.databinding.FragmentPainBinding
 
-
-class PainFragment : Fragment() {
-    private var _binding: FragmentPainBinding? = null
+class EvaluationFragment : Fragment() {
+    private var _binding: FragmentEvaluationBinding? = null
     private val binding get() = _binding!!
 
 
@@ -19,20 +19,16 @@ class PainFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentPainBinding.inflate(inflater, container, false)
+        _binding = FragmentEvaluationBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        // 페이지 이동
-        binding.buttonNext.setOnClickListener(){
-            (activity as CustomDialogActivity).dialogFragmentExample.slideNextPage()
+
+        binding.imageButtonHard.setOnClickListener(){
+            (activity as CustomDialogActivity).dialogFragmentExample.slidePreviousPage()
         }
+
         return view
     }
 
 
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 }
