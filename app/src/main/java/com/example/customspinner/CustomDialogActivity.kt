@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.customspinner.databinding.ActivityCustomDialogBinding
 import com.example.customspinner.databinding.ActivityMainBinding
+import com.example.customspinner.fragment.CustomDialogFragment
 
 class CustomDialogActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCustomDialogBinding
@@ -19,6 +20,8 @@ class CustomDialogActivity : AppCompatActivity() {
 
             val dialogFragmentExample = CustomDialogFragment()
             dialogFragmentExample.show(supportFragmentManager, null)
+
+
 
         }
     }
