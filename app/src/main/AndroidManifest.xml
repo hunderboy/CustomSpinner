@@ -4,7 +4,7 @@
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
-    <uses-feature android:name="android.hardware.type.watch" />
+<!--    <uses-feature android:name="android.hardware.type.watch" />-->
 
     <application
         android:allowBackup="true"
@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CustomSpinner">
-        <activity android:name=".SelectCountryActivity"></activity>
+        <activity android:name=".CustomDialogActivity"></activity>
+        <activity android:name=".SelectCountryActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

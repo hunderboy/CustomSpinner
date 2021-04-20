@@ -12,6 +12,7 @@
 
 <!-- SelectCountryActivity   -->
     <color name="blue_outline_Color">#3232FF</color>
-
+    <!--  투명색 tranperency -->
+    <color name="tranperency">#00000000</color>
 
 </resources>
