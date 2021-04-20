@@ -1,17 +1,20 @@
 package com.example.customspinner.fragment
 
+
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.util.Log
 import android.view.*
+import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.customspinner.CustomDialogActivity
-import com.example.customspinner.R
 import com.example.customspinner.databinding.FragmentCustomDialogBinding
-import com.example.customspinner.databinding.FragmentPainBinding
+
+
 
 class CustomDialogFragment : DialogFragment() {
     private var _binding: FragmentCustomDialogBinding? = null
@@ -62,6 +65,32 @@ class CustomDialogFragment : DialogFragment() {
                 1 -> PainKillerFragment()
                 else -> PainFragment()
             }
+        }
+    }
+
+
+    private fun getCurrentItemPosition(i: Int): Int {
+        Log.e("현재",""+binding.viewPager2Container.currentItem.toString())
+        return binding.viewPager2Container.currentItem + i
+    }
+    fun slideNextPage() {
+        val next = getCurrentItemPosition(+1)
+
+        if (next < binding.viewPager2Container.adapter?.itemCount ?: (+0)) {
+            // 다음 페이지 이동
+            binding.viewPager2Container.currentItem = next
+        } else { // 마지막 화면
+            Toast.makeText(context, "마지막 화면입니다.", Toast.LENGTH_SHORT).show()
+        }
+    }
+    fun slidePreviousPage() {
+        val previous = getCurrentItemPosition(-1)
+
+        if (previous >= 0) {
+            // 이전 페이지 이동
+            binding.viewPager2Container.currentItem = previous
+        } else { // 처음 화면
+            Toast.makeText(context, "처음 화면입니다.", Toast.LENGTH_SHORT).show()
         }
     }
 

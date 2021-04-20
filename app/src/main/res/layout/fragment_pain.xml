@@ -15,6 +15,7 @@
         android:layout_marginTop="16dp"
         android:text="@string/Question_about_pain"
         android:gravity="center"
+        android:textAppearance="@style/Qusetion_pain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/pain_explaination"
+        android:textAppearance="@style/expalin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/question_pain" />
@@ -50,8 +52,7 @@
         app:trackColorInactive="@color/colorGrayTransperency"
         app:trackHeight="8dp"
 
-
-        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintBottom_toTopOf="@+id/button_next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +60,7 @@
         />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/button_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"

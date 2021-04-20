@@ -21,8 +21,10 @@ class PainFragment : Fragment() {
         _binding = FragmentPainBinding.inflate(inflater, container, false)
         val view = binding.root
 
-
-
+        // 페이지 이동
+        binding.buttonNext.setOnClickListener(){
+            CustomDialogFragment().slideNextPage()
+        }
         return view
     }
 

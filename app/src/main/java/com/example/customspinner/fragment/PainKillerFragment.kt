@@ -22,7 +22,10 @@ class PainKillerFragment : Fragment() {
         _binding = FragmentPainKillerBinding.inflate(inflater, container, false)
         val view = binding.root
 
-
+        // 페이지 이동
+        binding.buttonPrevious.setOnClickListener(){
+            CustomDialogFragment().slidePreviousPage()
+        }
 
         return view
     }
