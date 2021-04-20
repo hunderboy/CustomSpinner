@@ -7,14 +7,93 @@
     android:layout_height="230dp"
     tools:context=".fragment.PainKillerFragment">
 
+
+    <ImageButton
+        android:id="@+id/imageButton_back"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/radius_white_button"
+
+        android:scaleType="fitCenter"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/question_pain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/Question_about_pain_killer"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/question_pain_killer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/pain_explaination"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question_pain" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question_pain_killer"
+        app:layout_constraintVertical_bias="0.4">
+
+        <ImageButton
+            android:id="@+id/imageButton_ok"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/radius_white_button"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/grey_circle"
+            android:elevation="5dp" />
+
+        <ImageButton
+            android:id="@+id/imageButton_no"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/radius_white_button"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/grey_circle"
+            android:elevation="5dp" />
+
+    </LinearLayout>
+
     <Button
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="B 프래그먼트"
+        android:layout_marginBottom="16dp"
+        android:text="제출하기"
+        android:backgroundTint="@color/colorIndigo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

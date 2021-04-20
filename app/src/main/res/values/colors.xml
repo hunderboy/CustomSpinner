@@ -15,4 +15,10 @@
     <!--  투명색 tranperency -->
     <color name="tranperency">#00000000</color>
 
+    <color name="colorIntro">#07BEB8</color>
+    <color name="colorGrayTransperency">#969696</color>
+    <color name="colorIndigo">#002E3F</color>
+
+
+
 </resources>

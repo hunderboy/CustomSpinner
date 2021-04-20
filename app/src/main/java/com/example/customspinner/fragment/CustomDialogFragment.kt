@@ -41,9 +41,8 @@ class CustomDialogFragment : DialogFragment() {
             WindowManager.LayoutParams.WRAP_CONTENT,
         )
 
-
         val pagerAdapter = PagerAdapter((activity as CustomDialogActivity))
-        binding.viewPager2Container.isUserInputEnabled = true  // 스크롤 허용
+        binding.viewPager2Container.isUserInputEnabled = false  // 스크롤 비허용
         binding.viewPager2Container.adapter = pagerAdapter
 
         return view
