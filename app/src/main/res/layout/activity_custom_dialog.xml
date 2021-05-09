@@ -11,10 +11,21 @@
         android:id="@+id/button_dialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="다이얼로그 소환"
+        android:text="운동 전 다이얼로그"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/button_dialog2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="운동 후 다이얼로그"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_dialog" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
