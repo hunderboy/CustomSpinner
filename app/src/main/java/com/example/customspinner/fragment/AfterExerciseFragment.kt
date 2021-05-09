@@ -4,23 +4,23 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentManager
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.customspinner.CustomDialogActivity
-import com.example.customspinner.R
 import com.example.customspinner.databinding.FragmentAfterExerciseBinding
-import com.example.customspinner.databinding.FragmentCustomDialogBinding
 
 class AfterExerciseFragment : DialogFragment() {
     private var _binding: FragmentAfterExerciseBinding? = null
     private val binding get() = _binding!!
+    private val TAG = "AfterExerciseFragment : "
 
 
     // 통증, 난이도 관련 ViewPager에 포함될 Fragments
@@ -33,9 +33,9 @@ class AfterExerciseFragment : DialogFragment() {
 
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentAfterExerciseBinding.inflate(inflater, container, false)
         val view = binding.root
@@ -45,8 +45,8 @@ class AfterExerciseFragment : DialogFragment() {
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
         dialog?.window?.setLayout(
-                WindowManager.LayoutParams.WRAP_CONTENT,
-                WindowManager.LayoutParams.WRAP_CONTENT,
+            WindowManager.LayoutParams.WRAP_CONTENT,
+            WindowManager.LayoutParams.WRAP_CONTENT,
         )
 
         val pagerAdapter = PagerAdapter((activity as CustomDialogActivity))
@@ -66,16 +66,16 @@ class AfterExerciseFragment : DialogFragment() {
         }
         override fun createFragment(position: Int): Fragment { // 페이지 Fragment 생성
             return when(position){ // 포지션에 따른 다른 페이지 Fragment 전달
-                0 -> QuestionPainAfterExerciseFragment()
-                1 -> EvaluationFragment()
-                else -> EvaluationFragment()
+                0 -> questionPainAfterExerciseFragment
+                1 -> evaluationFragment
+                else -> evaluationFragment
             }
         }
     }
 
 
     private fun getCurrentItemPosition(i: Int): Int {
-        Log.e("현재",""+binding.viewPager2Container.currentItem.toString())
+        Log.e("현재", "" + binding.viewPager2Container.currentItem.toString())
         return binding.viewPager2Container.currentItem + i
     }
     fun slideNextPage() {
@@ -102,6 +102,9 @@ class AfterExerciseFragment : DialogFragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+        Log.e(TAG + "onDestroyView", "호출됨")
+
+
     }
 
 

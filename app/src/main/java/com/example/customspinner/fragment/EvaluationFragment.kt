@@ -1,6 +1,7 @@
 package com.example.customspinner.fragment
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -14,6 +15,7 @@ import com.example.customspinner.databinding.FragmentPainBinding
 class EvaluationFragment : Fragment() {
     private var _binding: FragmentEvaluationBinding? = null
     private val binding get() = _binding!!
+    private val TAG = "EvaluationFragment : "
 
 
     /** 운동평가 타입 변수
@@ -70,6 +72,7 @@ class EvaluationFragment : Fragment() {
                 Toast.makeText(context, "복용여부를 설정해주세요.", Toast.LENGTH_SHORT).show()
             }else{
                 (activity as CustomDialogActivity).afterExerciseFragment.dismiss()
+
             }
         }
 
@@ -78,4 +81,12 @@ class EvaluationFragment : Fragment() {
     }
 
 
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+        Log.e(TAG+"onDestroyView","호출됨")
+
+    }
 }
