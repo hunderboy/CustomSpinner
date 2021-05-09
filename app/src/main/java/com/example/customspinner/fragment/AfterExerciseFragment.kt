@@ -24,11 +24,11 @@ class AfterExerciseFragment : DialogFragment() {
 
 
     // 통증, 난이도 관련 ViewPager에 포함될 Fragments
-    private val painFragment = PainFragment()               // 통증 질문
+    private val questionPainAfterExerciseFragment = QuestionPainAfterExerciseFragment() // 통증 질문
     private val evaluationFragment = EvaluationFragment()   // 난이도 질문
     private val FragList = arrayOf(
-            painFragment,
-            evaluationFragment,
+        questionPainAfterExerciseFragment,
+        evaluationFragment,
     )
 
 
@@ -66,7 +66,7 @@ class AfterExerciseFragment : DialogFragment() {
         }
         override fun createFragment(position: Int): Fragment { // 페이지 Fragment 생성
             return when(position){ // 포지션에 따른 다른 페이지 Fragment 전달
-                0 -> PainFragment()
+                0 -> QuestionPainAfterExerciseFragment()
                 1 -> EvaluationFragment()
                 else -> EvaluationFragment()
             }

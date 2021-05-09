@@ -9,11 +9,26 @@
 
 
 
+    <ImageButton
+        android:id="@+id/imageButton_previous"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/radius_white_button"
+
+        android:scaleType="fitCenter"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
     <TextView
         android:id="@+id/question_pain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="25dp"
         android:text="@string/Question_exercise_evaluation"
         android:gravity="center"
         android:textAppearance="@style/Qusetion_pain"
@@ -26,7 +41,6 @@
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,10 +57,10 @@
             android:elevation="5dp"
             android:padding="10dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/hard" />
+            android:src="@drawable/ic_evaluation_hard_black" />
 
         <ImageButton
-            android:id="@+id/imageButton_soso"
+            android:id="@+id/imageButton_normal"
             android:layout_width="78dp"
             android:layout_height="78dp"
             android:layout_marginStart="20dp"
@@ -56,8 +70,7 @@
             android:elevation="5dp"
             android:padding="10dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/soso" />
-
+            android:src="@drawable/ic_evaluation_normal_black" />
 
         <ImageButton
             android:id="@+id/imageButton_Easy"
@@ -71,9 +84,23 @@
             android:elevation="5dp"
             android:padding="10dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/easy" />
+            android:src="@drawable/ic_evaluation_easy_black" />
 
     </LinearLayout>
+
+
+    <Button
+        android:id="@+id/button_submit"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/colorIndigo"
+        android:layout_marginEnd="13dp"
+
+        android:text="@string/submit"
+        android:textSize="11dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 
     <TextView
