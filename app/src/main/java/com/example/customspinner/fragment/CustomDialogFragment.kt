@@ -23,11 +23,9 @@ class CustomDialogFragment : DialogFragment() {
     // 상단 개인 일,주,월 데이터 관련 ViewPager에 포함될 Fragments
     private val painFragment = PainFragment()
     private val painKillerFragment = PainKillerFragment()
-    private val evaluationFragment = EvaluationFragment() // 추가됨
     private val FragList = arrayOf(
         painFragment,
         painKillerFragment,
-        evaluationFragment,
     )
 
 
@@ -63,10 +61,9 @@ class CustomDialogFragment : DialogFragment() {
         }
         override fun createFragment(position: Int): Fragment { // 페이지 Fragment 생성
             return when(position){ // 포지션에 따른 다른 페이지 Fragment 전달
-                0 -> PainFragment()
-                1 -> PainKillerFragment()
-                2 -> EvaluationFragment() // 추가됨
-                else -> PainFragment()
+                0 -> painFragment
+                1 -> painKillerFragment
+                else -> painFragment
             }
         }
     }
